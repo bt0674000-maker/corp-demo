@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Aurora · 奥罗拉科技</title>
+<title>Aing Tech 科技</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -197,6 +197,30 @@ footer a:hover{color:#fff;}
 .reveal-delay-3{transition-delay:.24s;}
 .reveal-delay-4{transition-delay:.32s;}
 
+/* 信任 logo 墙 */
+.logo-wall{max-width:1120px;margin:0 auto;padding:0 24px 20px;text-align:center;}
+.logo-wall .lw-label{font-size:12px;letter-spacing:3px;color:var(--text-dim);opacity:.8;margin-bottom:26px;}
+.logo-wall .lw-row{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;}
+.lw-co{padding:14px 24px;border-radius:14px;background:var(--glass);border:1px solid var(--glass-border);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  font-weight:600;font-size:15px;letter-spacing:.5px;color:var(--text-dim);
+  transition:all .4s cubic-bezier(.16,1,.3,1);}
+.lw-co:hover{transform:translateY(-3px);color:#fff;border-color:rgba(255,255,255,.3);
+  box-shadow:0 12px 30px rgba(0,0,0,.4);}
+
+/* 玻璃卡 hover 渐变描边光效 */
+.glass-card::after{content:'';position:absolute;inset:-1px;border-radius:var(--radius);
+  background:linear-gradient(135deg,rgba(124,140,255,.4),rgba(62,207,168,.35),rgba(255,122,162,.3));
+  opacity:0;transition:opacity .5s;z-index:-1;filter:blur(2px);}
+.glass-card:hover::after{opacity:1;}
+
+/* CTA 光晕呼吸 */
+.cta-card{position:relative;}
+.cta-card::before{content:'';position:absolute;inset:-2px;border-radius:36px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2),var(--accent3));
+  opacity:.15;filter:blur(20px);z-index:-1;animation:ctaGlow 4s ease-in-out infinite;}
+@keyframes ctaGlow{0%,100%{opacity:.10}50%{opacity:.28}}
+
 /* ============ 响应式 ============ */
 @media(max-width:860px){
   .features{grid-template-columns:1fr;}
@@ -220,7 +244,7 @@ footer a:hover{color:#fff;}
 <!-- 毛玻璃导航 -->
 <nav class="nav">
   <div class="nav-inner">
-    <div class="brand"><span class="logo">A</span> Aurora</div>
+    <div class="brand"><span class="logo">A</span> Aing</div>
     <ul class="nav-links">
       <li><a href="#features">特性</a></li>
       <li><a href="#stats">数据</a></li>
@@ -234,7 +258,7 @@ footer a:hover{color:#fff;}
 
 <!-- 主视觉 -->
 <header class="hero">
-  <div class="hero-badge"><span class="dot"></span> 下一代智能平台 · Aurora OS</div>
+  <div class="hero-badge"><span class="dot"></span> Aing OS 2.0 · 今日全球发布</div>
   <h1>重新定义<br><span class="grad">数字未来</span></h1>
   <p>为想象力而生的尖端科技。极简的设计语言与无界的算力，在每一次滑动中，感受属于未来的流畅与惊艳。</p>
   <div class="hero-actions">
@@ -267,7 +291,7 @@ footer a:hover{color:#fff;}
   <div class="reveal">
     <span class="section-tag">Features</span>
     <h2>为大师而生<br>极致纯粹</h2>
-    <p class="sub">每一块玻璃、每一道光影，都为流畅与优雅而设计。Aurora 带来前所未有的沉浸体验。</p>
+    <p class="sub">每一块玻璃、每一道光影，都为流畅与优雅而设计。Aing 带来前所未有的沉浸体验。</p>
   </div>
   <div class="features">
     <div class="glass-card reveal reveal-delay-1">
@@ -300,6 +324,19 @@ footer a:hover{color:#fff;}
       <h3>无限扩展</h3>
       <p>模块化架构，从初创到独角兽，弹性伸缩，随你成长。</p>
     </div>
+  </div>
+</section>
+
+<!-- 信任 logo 墙 -->
+<section class="logo-wall reveal">
+  <div class="lw-label">被全球领先企业与机构信赖</div>
+  <div class="lw-row">
+    <span class="lw-co">◈ NovaLab</span>
+    <span class="lw-co">◈ Vertex</span>
+    <span class="lw-co">◈ Hyperion</span>
+    <span class="lw-co">◈ Quantum</span>
+    <span class="lw-co">◈ Maelstrom</span>
+    <span class="lw-co">◈ Orion&Co</span>
   </div>
 </section>
 
@@ -336,13 +373,13 @@ footer a:hover{color:#fff;}
     <div class="product reveal reveal-delay-1">
       <div class="glow" style="background:var(--accent)"></div>
       <div class="cat">AI / 云平台</div>
-      <h3>Aurora Cloud</h3>
+      <h3>Aing Cloud</h3>
       <p>领先的生成式 AI 云平台，模型训练、推理、部署一体化，助力企业智能跃迁。</p>
     </div>
     <div class="product reveal reveal-delay-2">
       <div class="glow" style="background:var(--accent2)"></div>
       <div class="cat">智能终端</div>
-      <h3>Aurora One</h3>
+      <h3>Aing One</h3>
       <p>全新一代智能终端，极窄边框、视网膜级显示、全天候续航，握感如艺术品。</p>
     </div>
     <div class="product reveal reveal-delay-3">
@@ -354,7 +391,7 @@ footer a:hover{color:#fff;}
     <div class="product reveal reveal-delay-4">
       <div class="glow" style="background:#b58cff"></div>
       <div class="cat">开发平台</div>
-      <h3>Aurora SDK</h3>
+      <h3>Aing SDK</h3>
       <p>面向开发者的下一代平台，简洁 API 与丰富组件，三行代码撬动无限可能。</p>
     </div>
   </div>
@@ -365,7 +402,7 @@ footer a:hover{color:#fff;}
   <div class="cta-card reveal">
     <span class="section-tag">Get Started</span>
     <h2>准备好与未来同行了吗？</h2>
-    <p>现在加入 Aurora，体验全球领先的智能科技。我们的专家团队将为你量身定制方案。</p>
+    <p>现在加入 Aing，体验全球领先的智能科技。我们的专家团队将为你量身定制方案。</p>
     <div class="hero-actions">
       <button class="btn btn-primary">免费试用</button>
       <button class="btn btn-glass">预约演示</button>
@@ -382,7 +419,7 @@ footer a:hover{color:#fff;}
     <a href="#">隐私</a>
     <a href="#">条款</a>
   </div>
-  <p>© 2026 Aurora 奥罗拉科技 · Designed for 未来</p>
+  <p>© 2026 Aing Tech · Designed for 未来</p>
 </footer>
 
 <script>
